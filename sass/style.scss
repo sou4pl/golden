@@ -10,8 +10,126 @@ $color1: #FED136;
 $color2: #F7F7F7;
 $color3: #ffffff;
 
+$transition: all 1s;
+
 /* global */
 
 *, *::before, *::after {
     box-sizing: border-box;
 }
+
+body {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.7;
+    font-family: $font-main;
+    color: $font-color-dark;    
+}
+
+.container {
+    max-width: 1140px;
+    padding: 24px 20px;
+    margin: 0 auto;    
+}
+section {
+    padding: 0 0;
+    /* border: solid 2px; */
+}
+
+.btn {
+    display: inline-block;
+    min-width: 160px;
+    margin: 24px auto 0 auto;
+    padding: 16px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border-width: 2px;
+    border-style: solid;
+    background-color: inherit;
+    background-position: 100% 0;
+    background-size: 300%;
+    font-weight: 700;
+}
+
+.btn:hover {
+    background-position: 0 100%;
+    color: #ffffff;
+    transition: $transition;
+}
+
+.flexbox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 24px;
+}
+
+/* splash */
+.logo {
+    font-family: $font-logo;
+    flex: 1;
+    color: $color1;
+    font-size: 24px;
+}
+
+.navigation {
+    flex: 1;
+    padding: 12px 0;
+    }
+    
+    .navigation ul {
+        padding: 0 0 0 0; 
+        margin: 0 0 0 0;
+        list-style-type: none;
+    }
+    
+    .navigation li {
+        display: inline-block;
+        margin: 0 36px 0 0; 
+        position: relative;
+    }
+    
+    .navigation a {
+        text-decoration: none;
+        color: $font-color-light;
+    }
+    
+    .navigation a:hover {
+        color: $color1;
+    }
+    
+    .navigation ul ul li {
+        margin: 6px 0 0 0;
+        display: block;
+        display: none;
+    }
+    
+    .navigation li:hover ul li {
+        display: block;
+        text-align: center;
+        background-color: $color2;
+    }
+    
+    .navigation li ul {
+        position: absolute;
+        display: block;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 12px 0 0 0;
+    }
+    
+    .navigation ul ul li a {
+        color: $color2;
+        display: block;
+        padding: 0 24px;
+    }
+    
+    .navigation ul ul li:hover {
+        background-color: $color2;
+    }
+    .navigation ul ul li a:hover {
+        color: $color2;
+    }
