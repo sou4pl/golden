@@ -32,23 +32,21 @@ body {
     margin: 0 auto;    
 }
 section {
-    padding: 0 0;
+    padding:  12px 12px;
     /* border: solid 2px; */
 }
 
 .btn {
-    display: inline-block;
-    min-width: 160px;
-    margin: 24px auto 0 auto;
+    display: block;
+    width: 160px;
+    margin: 12px auto 0 auto;
     padding: 16px;
     border-radius: 5px;
     font-size: 16px;
     text-align: center;
     text-decoration: none;
     cursor: pointer;
-    border-width: 2px;
-    border-style: solid;
-    background-color: inherit;
+    background-color: $color1;
     background-position: 100% 0;
     background-size: 300%;
     font-weight: 700;
@@ -56,34 +54,58 @@ section {
 
 .btn:hover {
     background-position: 0 100%;
-    color: #ffffff;
+    color: $color3;
     transition: $transition;
 }
 
-.flexbox {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    row-gap: 24px;
+.section-title {
+    font-family: $font-main;
+    color: $font-color-dark;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 0;
 }
 
+.section-subtitle {
+    font-family: $font-second;
+    color: gray;
+    font-size: 18px;
+    text-align: center;
+    font-style: italic;
+    margin-top: 0;
+}
+
+.row {
+    justify-content: space-between;
+}
 /* splash */
-.logo {
+
+.splash {
+    background-image: url(https://i.postimg.cc/wMyyHs0w/pexels-sy-donny-1841841.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: repeat-y;
+    padding-bottom: 24px;
+    min-height: 70vh;
+}
+
+.logo a {
     font-family: $font-logo;
-    flex: 1;
     color: $color1;
-    font-size: 24px;
+    font-size: 32px;
+    text-decoration: none;
 }
 
 .navigation {
-    flex: 1;
     padding: 12px 0;
     }
     
     .navigation ul {
-        padding: 0 0 0 0; 
-        margin: 0 0 0 0;
+        padding: 0;
+        margin: 0;
         list-style-type: none;
+        text-align: end;
     }
     
     .navigation li {
@@ -95,41 +117,54 @@ section {
     .navigation a {
         text-decoration: none;
         color: $font-color-light;
+        font-size: 18px;
     }
     
     .navigation a:hover {
         color: $color1;
     }
     
-    .navigation ul ul li {
-        margin: 6px 0 0 0;
-        display: block;
-        display: none;
-    }
-    
-    .navigation li:hover ul li {
-        display: block;
-        text-align: center;
-        background-color: $color2;
-    }
-    
-    .navigation li ul {
-        position: absolute;
-        display: block;
-        left: 50%;
-        transform: translateX(-50%);
-        padding: 12px 0 0 0;
-    }
-    
-    .navigation ul ul li a {
-        color: $color2;
-        display: block;
-        padding: 0 24px;
-    }
-    
-    .navigation ul ul li:hover {
-        background-color: $color2;
-    }
-    .navigation ul ul li a:hover {
-        color: $color2;
-    }
+.page-title {
+    font-family: $font-second;
+    color: $font-color-light;
+    font-size: 48px;
+    text-align: center;
+    margin-bottom: 12px;
+    margin-top: 60px;
+    font-style: italic;
+}
+
+.page-subtitle {
+    color: $font-color-light;
+    font-size: 72px;
+    text-align: center;
+    margin-top: 0;
+}
+
+/* services */
+
+.serv-box {
+    text-align: center;
+
+}
+
+.serv-box i {
+    color: $color1;
+    font-size: 36px;
+    border: solid 3px $color1;
+    border-radius: 50%;
+    padding: 18px 12px;
+    width: 80px;
+    height: 80px;
+}
+
+.box-title {
+    font-size: 24px;
+    margin: 12px;
+}
+
+.box-text {
+    font-family: $font-second;
+    font-size: 14px;
+    color: gray;
+}
