@@ -78,6 +78,11 @@ section {
 .row {
     justify-content: space-between;
 }
+
+.border {
+    border: solid 2px;
+}
+
 /* splash */
 
 .splash {
@@ -143,6 +148,10 @@ section {
 
 /* services */
 
+.services {
+    margin-bottom: 18px;
+}
+
 .serv-box {
     text-align: center;
 
@@ -167,4 +176,23 @@ section {
     font-family: $font-second;
     font-size: 14px;
     color: gray;
+}
+
+/* portfolio */
+
+.portfolio-box {
+    padding: 0;
+    text-align: center;
+    margin: 8px 0;
+    background-color: $color3;
+}
+
+.portfolio-box img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.portfolio {
+    background-color: $color2;
 }
